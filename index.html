@@ -1,0 +1,1502 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+        body{
+            font-family: 'Mulish', sans-serif;
+        }
+        .banner {
+            background-image: url(./RichyLifeWeb/Web/banner.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .customer-navbar ul li a {
+            color: #fff !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            margin-right: 12px !important;
+        }
+
+        .phone-no,
+        .address,
+        .email {
+            font-size: 15px !important;
+            color: #fff;
+            font-weight: 400 !important;
+
+        }
+
+        .navbar-info i {
+            color: #daa24f !important;
+        }
+
+        .hr {
+            height: 0.2px !important;
+            color: #daa24f !important;
+            width: 100% !important;
+            opacity: unset !important;
+            opacity: 0.6 !important;
+        }
+
+        .custom-container {
+            /* max-width: 1680px !important; */
+            padding-right: 100px;
+            padding-left: 100px;
+
+        }
+
+        .logo-img {
+            width: 65px;
+            height: 65px;
+        }
+
+        .luxury-btn {
+            border: 1px solid #daa24f;
+            color: #fff !important;
+            font-weight: 500;
+            padding: 10px 35px;
+            border-radius: 25px;
+        }
+
+        .banner-btn {
+            position: absolute;
+            bottom: 50px;
+        }
+
+        .icon-img {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            z-index: 9999;
+        }
+
+        .flat-icon {
+            width: 15px;
+            height: 10px;
+        }
+
+        .services-section {
+            background: #000;
+        }
+
+        .services-heading h2 {
+            font-size: 40px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .services-card .card {
+            border: 0 !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+        }
+
+        .services-card .card-title {
+            font-size: 16px !important;
+            color: #fff;
+            font-weight: 400 !important;
+        }
+
+        /* .card-img{
+        background-image: url(./RichyLifeWeb/Web/services-card1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 555px;
+        border-radius: 0;
+    } */
+
+        .content {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .content .content-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay {
+            opacity: 1;
+        }
+
+        .content-image {
+            width: 100%;
+        }
+
+        .content-details {
+            position: absolute;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            /* -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s; */
+        }
+
+        .content:hover .content-details {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        .content-details h3 {
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+
+        .content-details p {
+            color: #fff;
+            font-size: 15px;
+            color: #daa24f;
+        }
+
+        .book-btn {
+            border: 1px solid #daa24f;
+            color: #fff !important;
+            font-weight: 600;
+            padding: 10px 35px;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+
+        .column-image {
+            background-image: url(./RichyLifeWeb/Web/bg-img.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .card-heading-section h2,
+        .faq-heading-section h2,
+        .contact-heading h2 {
+            font-size: 40px;
+            color: #fff;
+            font-weight: 500;
+
+        }
+
+        .one-section .card {
+            background: transparent;
+            border: 1px solid #daa24f77;
+            border-radius: 60px;
+        }
+
+        .inner-content p {
+            font-size: 17px !important;
+        }
+
+        .custom-experience-card h3 {
+            color: #daa24f;
+            font-size: 70px !important;
+        }
+
+        .custom-experience-card p {
+            color: #fff;
+            font-size: 18px !important;
+        }
+
+
+        .two-card-section {
+            background: #000;
+            padding-top: 100px;
+        }
+
+        .faq-section {
+            background: #000;
+        }
+
+        .image-card-one {
+            background-image: url(./RichyLifeWeb/Web/right-image.png) !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 492px;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .image-card-two {
+            background-image: url(./RichyLifeWeb/Web/left-image.png) !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 492px;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        .first-card-image .content-heading h3 {
+            color: #fff !important;
+            font-size: 40px !important;
+        }
+
+        .first-card-image .content-descr p {
+            color: #fff;
+            font-size: 17px;
+        }
+
+        .first-card-image .content-mini-heading h6 {
+            color: #fff !important;
+            font-size: 22px !important;
+        }
+
+        .second-card-image .content-heading h3 {
+            color: #fff !important;
+            font-size: 40px !important;
+
+        }
+
+        .second-card-image .content-mini-heading h6 {
+            color: #fff !important;
+            font-size: 22px !important;
+
+
+        }
+
+        .second-card-image .content-descr p {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .left-col {
+            margin-left: 2rem !important;
+        }
+
+        .card-book-btn button {
+            background-color: transparent !important;
+            border-radius: 25px;
+            color: #fff;
+            font-weight: 600 !important;
+            font-size: var(--para-font-size);
+            border: 0 !important;
+            padding: 10px 40px !important;
+            border: 2px solid #daa24f !important;
+
+        }
+
+        .card-book-btn button:hover {
+            background-color: #daa24f !important;
+            color: #fff;
+            border: 2px solid #daa24f !important;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed),
+        button.accordion-button.collapsed {
+            background: #000;
+            box-shadow: none !important;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .accordion-section .accordion-body {
+            background: #000;
+            box-shadow: none !important;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .accordion-section .accordion-item {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-color: #daa24f !important;
+        }
+
+        .accordion-section .accordion-item:hover,
+        .accordion-section .accordion-item:focus,
+        .accordion-section .accordion-item.active {
+            box-shadow: none;
+        }
+
+        .accordion-section button.active,
+        .accordion-section button {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .accordion-button::after {
+            background: url(./RichyLifeWeb/Web/plus.png);
+            width: 15px;
+            height: 15px;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background: url(./RichyLifeWeb/Web/minus.png);
+            width: 17px;
+            height: 3px;
+        }
+
+        .feedback-card .card {
+            border: 0;
+            border-radius: 0;
+            background-color: unset !important;
+        }
+
+        .feedback-card p {
+            color: #fff;
+        }
+
+        .feedback-img {
+            background-image: url(./RichyLifeWeb/Web/feedback01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 420px;
+            border-radius: 0;
+        }
+
+        .feedback-card h4 {
+            background-color: #134e4a;
+            padding: 10px 60px;
+            font-size: 18px;
+            color: #daa24f;
+            border: 1px solid #134e4a;
+            border-radius: 0 !important;
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feedback-card .card-body {
+            height: 115px;
+        }
+
+        .contact-form {
+            background: #1c1c1c;
+        }
+
+        .contact-heading p {
+            color: #fff;
+            font-size: 22px;
+        }
+
+        a {
+            text-decoration: none;
+            color: unset !important;
+        }
+
+        .footer-section {
+            background: #000000;
+            position: relative;
+        }
+
+        .footer-cta {
+            border-bottom: 1px solid #DCA24B;
+        }
+
+        .cta-text1 h1 {
+            color: #F4EDED !important;
+            /* font-size: 20px; */
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .single-cta1 p {
+            color: #F4EDED !important;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .single-cta i {
+            color: #DCA24B;
+            font-size: 30px;
+            float: left;
+        }
+
+        .cta-text {
+            padding-left: 15px;
+            display: inline-block;
+        }
+
+        .cta-text h4 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .cta-text span {
+            color: #fff;
+            font-size: 19px;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-pattern img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 330px;
+            background-size: cover;
+            background-position: 100% 100%;
+        }
+
+        .footer-logo {
+            margin-bottom: 24px;
+        }
+
+        .footer-logo img {
+            max-width: 200px;
+        }
+
+        .footer-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #fff;
+            line-height: 28px;
+        }
+
+        .footer-social-icon span {
+            color: #fff;
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .footer-social-icon a {
+            color: #fff;
+            font-size: 16px;
+            margin-right: 15px;
+        }
+
+        .footer-social-icon i {
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 38px;
+            border-radius: 50%;
+            background-color: #DCA24B;
+            color: black !important;
+        }
+
+        .facebook-bg {
+            background: #3B5998;
+        }
+
+        .twitter-bg {
+            background: #55ACEE;
+        }
+
+        .footer-widget-heading h3 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        /* .footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #FF5E14;
+} */
+        .footer-widget ul li {
+            display: inline-block;
+            float: left;
+            width: 50%;
+            margin-bottom: 12px;
+        }
+
+        .footer-widget ul li a:hover {
+            color: #E5DEDA;
+        }
+
+        .footer-widget ul li a {
+            color: #fff !important;
+            text-transform: capitalize;
+        }
+
+        .subscribe-form {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subscribe-form input {
+            width: 100%;
+            padding: 14px 28px;
+            background: #2E2E2E;
+            border: 1px solid #2E2E2E;
+            color: #fff;
+        }
+
+        /* .subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #FF5E14;
+    padding: 13px 20px;
+    border: 1px solid #FF5E14;
+    top: 0;
+} */
+        .footerform {
+            float: right;
+        }
+
+        .custom-form-btn {
+            border: 2px solid #DCA24B !important;
+            border-radius: 25px !important;
+            padding: 10px 35px !important;
+            color: white !important;
+        }
+
+        .subscribe-form button i {
+            color: #fff;
+            font-size: 22px;
+            transform: rotate(-6deg);
+        }
+
+        .copyright-area {
+            background: #202020;
+            padding: 25px 0;
+        }
+
+        .copyright-text p {
+            margin: 0;
+            font-size: 14px;
+            color: #878787;
+        }
+
+        .copyright-text p a {
+            color: #FF5E14;
+        }
+
+        .footer-menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .footer-menu li:hover a {
+            color: #EDEDED;
+        }
+
+        .footer-menu li a {
+            font-size: 14px;
+            color: #878787;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="description"] {
+            background-color: unset !important;
+            border-bottom: 1px solid #dca24b86;
+            border-radius: unset !important;
+            border-top: unset !important;
+            border-left: unset !important;
+            border-right: unset !important;
+            padding: 15px;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        .custom-form-btn1 {
+            border: 1px solid #dca24b86 !important;
+            border-radius: 25px !important;
+            padding: 10px 35px !important;
+            color: white !important;
+        }
+
+        .custom-form-btn2 {
+            border: 1px solid #dca24b86 !important;
+            border-radius: 25px !important;
+            padding: 10px 35px !important;
+            color: white !important;
+        }
+
+        .custom-form-btn:hover {
+            background-color: #daa24f !important;
+        }
+
+        .contact-form {
+            background: #1c1c1c;
+            position: relative;
+            /* height: 60vh; */
+        }
+
+        .form-btn {
+            display: flex;
+            justify-content: end;
+            margin-bottom: 60px;
+        }
+
+        .form-space {
+            justify-content: space-between !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="banner-section">
+            <div class="banner">
+                <div class="topnav pt-4">
+                    <div class="container-fluid custom-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="navbar-logo">
+                                    <a class="navbar-brand" href="#"><img src="./RichyLifeWeb/Web/logo.png" alt=""
+                                            class="img-fluid logo-img"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="navbar-info">
+                                    <div class="row d-flex">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-12 d-flex justify-content-end">
+                                                    <div class="phone-no">
+                                                        <span>
+                                                            <i class="fa fa-phone me-3 fs-5" aria-hidden="true"></i>
+                                                            +02020233923
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 d-flex justify-content-end mt-2">
+                                                    <div class="email">
+                                                        <span>
+                                                            <i class="fa fa-envelope me-2 fs-5" aria-hidden="true"></i>
+                                                            info@richylife.ae
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end">
+                                            <div class="address">
+                                                <span> <i class="fa fa-map-marker me-2 fs-5" aria-hidden="true"></i>
+                                                    Suite A406, The Opus Tower Business Bay, Dubai</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light customer-navbar pt-0">
+                        <div class="container-fluid custom-container">
+                            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Rent a car</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Luxury Yatch Rental</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Exclusive Water Supports</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Exotic Pet VIP Experience</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span><img src="./RichyLifeWeb/Web/aed.png" alt=""
+                                                    class="flat-icon me-2">AED</span>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="banner-btn">
+                    <div class="container-fluid custom-container">
+                        <button type="button" class="btn btn-outline-primary luxury-btn">EXPERIENCE LUXURY</button>
+                    </div>
+                </div>
+                <div class="icon-img">
+                    <div class="container-fluid ">
+                        <div class="get-in-touch-icon">
+                            <img src="./RichyLifeWeb/Web/getintouch.png" alt="">
+                        </div>
+                        <div class="whatsapp-icon pt-3">
+                            <img src="./RichyLifeWeb/Web/whatsapp.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="services-section">
+            <div class="services-content pt-5">
+                <div class="container-fluid custom-container">
+                    <div class="services-heading mb-2">
+                        <h2>Our Services</h2>
+                    </div>
+                    <hr class="hr">
+                    <div class="services-card mt-5">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card1.jpg"
+                                                alt="">
+                                            <div class="content-details">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card2.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card3.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card4.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card5.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card6.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card7.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="content">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="./RichyLifeWeb/Web/services-card8.jpg"
+                                                alt="">
+                                            <div class="content-details fadeIn-bottom">
+                                                <p class="content-text">Unforgettable Jetski Rental Experiences</p>
+                                                <h3 class="content-title">RIDE THE WAVES IN LUXURY</h3>
+                                                <button type="button" class="btn btn-outline-primary book-btn">BOOK
+                                                    NOW</button>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Premium Jetski Rental</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="one-section-section">
+            <div class="one-section">
+                <div class="bg-image">
+                    <div class="column-image">
+                        <div class="container-fluid custom-container">
+                            <div class="row pt-5">
+                                <div class="col-md-12">
+                                    <div class="card mt-5">
+                                        <div class="container-fluid custom-container">
+                                            <div class="card-content pt-5 pb-4">
+                                                <div class="card-heading-section">
+                                                    <h2>RICHYLIFE CLUB</h2>
+                                                </div>
+                                                <hr class="hr">
+                                                <div class="card-inner-content pt-4 pb-5">
+                                                    <div class="row d-flex justify-content-center align-items-center">
+                                                        <div class="col-md-6">
+                                                            <div class="inner-content pt-3">
+                                                                <p class="text-light">
+                                                                    Richy Life, based in Dubai and Turkey, is a leading
+                                                                    provider of
+                                                                    luxurious holidays. Visit Richy Life for your next
+                                                                    fantastic
+                                                                    getaway from your bustling daily schedule and to
+                                                                    live life to
+                                                                    the fullest. We serve as a substitute for and
+                                                                    synonym for the
+                                                                    opulent existence. There is no better site than
+                                                                    Richy Life if you
+                                                                    want to have an enjoyable vacation away from home.
+                                                                    We
+                                                                    welcome visitors and travelers who want to stay in
+                                                                    luxurious
+                                                                    villas and opulent bungalows. Our acclaimed and
+                                                                    exclusive trip
+                                                                    packages are available to travelers worldwide.
+                                                                </p>
+                                                                <p class="text-light">
+                                                                    At Richy Life, everything is lavish and upscale. The
+                                                                    moment
+                                                                    you make a reservation with us, you begin living a
+                                                                    grand and
+                                                                    opulent existence. High-class automobiles,
+                                                                    helicopters, private
+                                                                    aircraft, and yacht are available to our guests for
+                                                                    luxurious and
+                                                                    exotic excursions. Your time with us will be some of
+                                                                    the finest
+                                                                    times of your life. Your luxury vacations will be
+                                                                    planned and
+                                                                    mapped out by our highly skilled and experienced
+                                                                    team of
+                                                                    travel experts. Our goal is to provide our visitors
+                                                                    a vacation like
+                                                                    none they've had before.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="custom-experience-card">
+                                                                <div class="row d-flex justify-content-center">
+                                                                    <div class="col-md-6 d-flex justify-content-center">
+                                                                        <div class="">
+                                                                            <h3 class="text-center">5%</h3>
+                                                                            <p class="text-light">Years of Experience
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-6  d-flex justify-content-center">
+                                                                        <div class="">
+                                                                            <h3 class="text-center">5%</h3>
+                                                                            <p class="text-light">Years of Experience
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-12 d-flex justify-content-center">
+                                                                        <div class="">
+                                                                            <h3 class="text-center">5%</h3>
+                                                                            <p class="text-light">Years of Experience
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-6  d-flex justify-content-center">
+                                                                        <div class="">
+                                                                            <h3 class="text-center">5%</h3>
+                                                                            <p class="text-light">Years of Experience
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-6  d-flex justify-content-center">
+                                                                        <div class="">
+                                                                            <h3 class="text-center">5%</h3>
+                                                                            <p class="text-light">Years of Experience
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="two-card-section pb-5">
+            <div class="container-fluid pe-0 ps-0">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 col-xl-6 two-card-col">
+                        <div class="first-card-image">
+                            <div class="image-card-one">
+                                <div class="blur"></div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 left-col ps-0">
+                                            <div class="content">
+                                                <div class="content-mini-heading">
+                                                    <h6>Get a unique feeling</h6>
+                                                </div>
+                                                <div class="content-heading">
+                                                    <h3>Get 15% Summer Discount</h3>
+                                                </div>
+                                                <div class="content-descr">
+                                                    <p>Escape the ordinary and embrace a world of luxury with our
+                                                        exclusive Private Yacht Rentals. Set sail on a journey of
+                                                        opulence and extravagance, where every wave carries you
+                                                        to new heights of indulgence. Whether you're planning a
+                                                        serene retreat or celebrating a milestone in your life, our
+                                                        fleet
+                                                        of exquisite yachts promises an experience beyond compare</p>
+                                                </div>
+                                                <div class="card-book-btn mt-2">
+                                                    <a href=""> <button type="button" class="btn btn-primary">BOOK
+                                                            NOW</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-6 ">
+                        <div class="second-card-image">
+                            <div class="image-card-two">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-5"></div>
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-7 right-col ps-0">
+                                            <div class="content">
+                                                <div class="content-mini-heading">
+                                                    <h6>Get a unique feeling</h6>
+                                                </div>
+                                                <div class="content-heading">
+                                                    <h3>Get 10% Discount on Private Jet Charter</h3>
+                                                </div>
+                                                <div class="content-descr">
+                                                    <p>Escape the ordinary and embrace a world of luxury with our
+                                                        exclusive Private Yacht Rentals. Set sail on a journey of
+                                                        opulence and extravagance, where every wave carries you
+                                                        to new heights of indulgence. Whether you're planning a
+                                                        serene retreat or celebrating a milestone in your life, our
+                                                        fleet
+                                                        of exquisite yachts promises an experience beyond compare.</p>
+                                                </div>
+                                                <div class="card-book-btn mt-2">
+                                                    <a href=""> <button type="button" class="btn btn-primary">BOOK
+                                                            NOW</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section pb-5">
+            <div class="container-fluid custom-container">
+                <div class="faq-content">
+                    <div class="faq-heading-section">
+                        <h2>FAQ</h2>
+                    </div>
+                    <hr class="hr">
+                    <div class="accordion-section pb-5">
+                        <div class="container-fluid custom-container">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            How Can I Rent A Car In Dubai?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            It is shown by default, until the collapse plugin adds the appropriate
+                                            classes that we use to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within the though the
+                                            transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Can I Smoke Inside The Car?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            It is hidden by default, until the collapse plugin adds the appropriate
+                                            classes that we use to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within the though the
+                                            transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Do I Need To Make A Deposit To Rent A Vehicle?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            It is hidden by default, until the collapse plugin adds the appropriate
+                                            classes that we use to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within the though the
+                                            transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Can I Rent A Luxury A Car in Dubai For A Wedding Or Special Event?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            It is hidden by default, until the collapse plugin adds the appropriate
+                                            classes that we use to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within the though the
+                                            transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            What Do I Need Reserve A Car?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            It is hidden by default, until the collapse plugin adds the appropriate
+                                            classes that we use to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within the though the
+                                            transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer-feedback mt-5">
+                        <div class="feedback-card">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="feedback-img"></div>
+                                        <div class="card-body">
+                                            <p class="card-text text-center">Im a car enthusiast, and RichyLife Club's
+                                                premium car rentals allowed me to
+                                                experience some of the finest cars in the
+                                                world. It's like having a garage of dreams!
+                                            </p>
+                                        </div>
+                                        <h4>- Thrilled Guest</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="feedback-img"
+                                            style="background-image: url(./RichyLifeWeb/Web/feedback02..jpg);"></div>
+                                        <div class="card-body">
+                                            <p class="card-text text-center">Being a UAE resident, RichyLife Club has
+                                                shown me the hidden gems of my own
+                                                country through their exclusive services. An
+                                                amazing way to explore!
+                                            </p>
+                                        </div>
+                                        <h4>- Joyful Adventurer</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="feedback-img"
+                                            style="background-image: url(./RichyLifeWeb/Web/feedback03.jpg);"></div>
+                                        <div class="card-body">
+                                            <p class="card-text text-center">RichyLife Club turned my dream of cruising
+                                                on a luxury yacht into reality. Their attention
+                                                to detail and impeccable service made my
+                                                day truly extraordinary
+                                            </p>
+                                        </div>
+                                        <h4>- Delighted Client</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="feedback-img"
+                                            style="background-image: url(./RichyLifeWeb/Web/feedback04.jpg);"></div>
+                                        <div class="card-body">
+                                            <p class="card-text text-center">Renting a car from Richylife was a breeze.
+                                                Luxury at its finest! Highly recommended.
+                                            </p>
+                                        </div>
+                                        <h4>- Happy Customer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+        <section class="contact-form">
+            <div class="container-fluid custom-container">
+                <div class="footer-cta1 pt-5 pb-5">
+                    <div class="single-cta1">
+                        <div class="contact-heading">
+                            <h2>Get In Touch</h2>
+                            <p>Experience Elegance & Convenience</p>
+                        </div>
+                        <hr class="hr">
+                    </div>
+                </div>
+                <div class="container-fluid custom-container">
+                    <form class="row mb-0 pt-5 form-space">
+                        <div class="col-5 mb-5">
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        </div>
+                        <div class="col-5 mb-5">
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        </div>
+                        <div class="col-5 mb-5">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="email">
+                        </div>
+                        <div class="col-5 mb-5">
+                            <input type="number" class="form-control" placeholder="contact" aria-label="contact">
+                        </div>
+                        <div class="col-12 mb-5">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Subject">
+                        </div>
+                        <div class="col-12 mb-5">
+                            <input type="description" class="form-control" id="inputAddress2" placeholder="Message">
+                        </div>
+                        <div class="col-12  form-btn">
+                            <div class="footerform1">
+                                <button type="button" class="btn btn-outline-secondary custom-form-btn">SUBMIT</button>
+                            </div>
+                            <div class="footerform2 ps-4 d-flex align-items-center">
+                                <button type="button" class="btn btn-outline-secondary custom-form-btn"><i
+                                        class="fa fa-whatsapp" aria-hidden="true" style="font-size: 20px;"></i> <span
+                                        class="ms-2 ">TALK TO US</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+       <section>
+        <footer class="footer-section">
+            <div class="container-fluid custom-container">
+                <div class="footer-cta pt-5 pb-5">
+                   <div class="container-fluid custom-container">
+                    <div class="row ">
+                        <div class="col-xl-3 col-md-4 mb-30 d-flex justify-content-center">
+                            <div class="single-cta">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <div class="cta-text">
+                                    <h4></h4>
+                                    <span>+971542661354</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-4 mb-30 d-flex justify-content-center">
+                            <div class="single-cta">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <div class="cta-text">
+                                    <h4></h4>
+                                    <span>info@richylife.ae</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-4 mb-30 d-flex justify-content-center">
+                            <div class="single-cta">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <div class="cta-text">
+                                    <h4></h4>
+                                    <span>Suite A406, The Opus Tower Business Bay, Dubai.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><h1 style="color: #DCA24B;">Richylife <span style="color: #fff;">Club</span></h1> </a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>The moments you spend with us will be the best
+                                        days of your life.</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3 style="color: #DCA24B;">Navigation</h3>
+                                </div>
+                                <ul class="ps-0 ms-0">
+                                    <li><a href="#">Rent a car</a></li>
+                                    <li><a href="#">Luxury Yatch Rentals</a></li>
+                                    <li><a href="#">Remium Jetskyi Rentals</a></li>
+                                    <li><a href="#">Private Jet Charter</a></li>
+                                    <li><a href="#">Exotic Pet VIP Services</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Helicopter Rentals</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Chauffer Services</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3 style="color: #DCA24B;">Subscribe to our Newsletter</h3>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="First Name">
+                                        <br>
+                                        <br>
+                                        <div class="footerform">
+                                            <button type="button"
+                                                class="btn btn-outline-secondary custom-form-btn">SUBSCRIBE</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+       </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
